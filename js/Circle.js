@@ -6,7 +6,7 @@ class CircleModel{
         this.display_height = display_height;
         this.x = Math.random()*(display_width-this.r*2)+this.r;
         this.y = Math.random()*(display_height-this.r*2)+this.r;
-        this.color = `rgb(${Math.round(Math.random()*220)},${Math.round(Math.random()*220)},${Math.round(Math.random()*220)})`;
+        this.color = `rgba(${Math.round(Math.random()*220)+35},${Math.round(Math.random()*220)+35},${Math.round(Math.random()*220)+35},0.5)`;
         this.dx = Math.round(Math.random())==0 ? -1 : 1;
         this.dy = Math.round(Math.random())==0 ? -1 : 1;
     }

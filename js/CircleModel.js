@@ -9,9 +9,19 @@ class CircleModel{
         this.color = `rgba(${Math.round(Math.random()*220)+35},${Math.round(Math.random()*220)+35},${Math.round(Math.random()*220)+35},0.5)`;
         this.dx = Math.round(Math.random())==0 ? -1 : 1;
         this.dy = Math.round(Math.random())==0 ? -1 : 1;
+
+        this.state = 'alive';
     }
 
-    updata(){
+    setClicked(){
+        this.state = 'clicked';
+    }
+
+    isClicked(){
+        return this.state=='clicked';
+    }
+
+    update(){
         this.x+=this.dx;
         this.y+=this.dy;
         if(this.x<this.r || this.x>this.display_width-this.r){
